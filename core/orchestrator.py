@@ -1,7 +1,9 @@
 """Ties everything together: parse input -> build initial state -> run
 the LangGraph -> persist outputs/schedule_final.json,
-outputs/schedule_model.py and outputs/fairness_report.txt.
+outputs/schedule_model.py, outputs/fairness_report.txt and
+outputs/schedule_table.png.
 """
+import datetime
 import json
 import os
 import time
@@ -85,4 +87,69 @@ def _write_outputs(state: ScheduleState, output_dir: str) -> None:
     with open(report_path, "w", encoding="utf-8") as f:
         f.write(format_fairness_report(fairness_payload, state["workers"]))
 
+    _render_schedule_table(
+        schedule=state["schedule_solution"],
+        output_dir=output_dir,
+        case_type=state["case_type"],
+        is_complete=state["is_complete"],
+        iterations=state["iteration"],
+    )
+
     logger.info(f"Outputs written to {output_dir}/")
+
+
+def _render_schedule_table(
+    schedule: Dict, output_dir: str, case_type: str, is_complete: bool, iterations: int
+) -> None:
+    """Genera outputs/schedule_table.png (giorno x turno -> lavoratori) a
+    partire dallo schedule finale scelto dal grafo. Se matplotlib non e'
+    installato, salta la generazione senza far fallire il resto del run
+    (i tre output principali sono comunque gia' stati scritti sopra)."""
+    if not schedule:
+        logger.info("Nessuno schedule valido da disegnare: salto la tabella PNG.")
+        return
+
+    try:
+        import matplotlib
+        matplotlib.use("Agg")
+        import matplotlib.pyplot as plt
+    except ImportError:
+        logger.info(
+            "matplotlib non installato: salto la generazione della tabella "
+            "PNG (pip install matplotlib per abilitarla)."
+        )
+        return
+
+    start_date = datetime.date.fromisoformat(config.HORIZON_START)
+    giorni = sorted(schedule.keys(), key=int)
+    nomi_turni = ["Mattina", "Pomeriggio", "Notte"]
+
+    etichette_righe, righe = [], []
+    for g in giorni:
+        data_giorno = start_date + datetime.timedelta(days=int(g))
+        etichette_righe.append(f"Giorno {g}\n{data_giorno.strftime('%d/%m/%Y')}")
+        riga = []
+        for turno in ["0", "1", "2"]:
+            lavoratori = schedule[g].get(turno, [])
+            riga.append(", ".join(str(w) for w in lavoratori) if lavoratori else "-")
+        righe.append(riga)
+
+    fig, ax = plt.subplots(figsize=(10, len(giorni) * 0.4 + 1))
+    ax.axis("off")
+    stato = "completo" if is_complete else "miglior tentativo"
+    ax.set_title(
+        f"SmartScheduler — Caso {case_type} — {stato} ({iterations} iterazioni)",
+        fontsize=13, fontweight="bold", pad=14,
+    )
+    tabella = ax.table(
+        cellText=righe, rowLabels=etichette_righe, colLabels=nomi_turni,
+        loc="center", cellLoc="center",
+    )
+    tabella.auto_set_font_size(False)
+    tabella.set_fontsize(9)
+    tabella.scale(1, 1.8)
+
+    output_path = os.path.join(output_dir, "schedule_table.png")
+    plt.savefig(output_path, dpi=200, bbox_inches="tight")
+    plt.close(fig)
+    logger.info(f"Tabella immagine salvata in: {output_path}")

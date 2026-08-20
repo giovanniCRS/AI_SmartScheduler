@@ -104,3 +104,65 @@
 11:51:18 | INFO    | core.graph | Final attempt was invalid/worse than an earlier iteration; falling back to the best valid schedule found (gap=0.226).
 11:51:18 | INFO    | core.orchestrator | Finished after 5 iteration(s), 127.7s, is_complete=False, groq_calls=6, groq_tokens~19818
 11:51:18 | INFO    | core.orchestrator | Outputs written to outputs/
+16:10:28 | INFO    | core.orchestrator | Starting SmartScheduler: case_type=B workers=20 max_iterations=5
+16:10:31 | INFO    | llm.groq_client | Groq call ok (attempt 1): ~1883 tokens, model=qwen/qwen3.6-27b
+16:10:31 | INFO    | agents.preference_agent | Parsed preferences for 20 workers
+16:10:34 | INFO    | llm.groq_client | Groq call ok (attempt 1): ~4080 tokens, model=qwen/qwen3.6-27b
+16:10:34 | INFO    | agents.drafting_agent | DraftingAgent produced 114 lines of logic
+16:10:47 | INFO    | agents.verification_agent | [iter 1] new best valid schedule (gap=0.349)
+16:10:47 | INFO    | agents.verification_agent | [iter 1] hard_errors=0 least_satisfied=[2]
+16:11:02 | INFO    | llm.groq_client | Groq call ok (attempt 1): ~3361 tokens, model=qwen/qwen3.6-27b
+16:11:02 | INFO    | agents.refinement_agent | RefinementAgent produced 135 lines of logic
+16:11:05 | INFO    | agents.verification_agent | [iter 2] new best valid schedule (gap=0.339)
+16:11:05 | INFO    | agents.verification_agent | [iter 2] hard_errors=0 least_satisfied=[17]
+16:11:12 | INFO    | llm.groq_client | Rate limiter: waited 6.5s for token budget
+16:11:34 | INFO    | llm.groq_client | Groq call ok (attempt 1): ~4009 tokens, model=qwen/qwen3.6-27b
+16:11:34 | INFO    | agents.refinement_agent | RefinementAgent produced 152 lines of logic
+16:11:35 | INFO    | agents.verification_agent | [iter 3] execution/solve failed: File "C:\Users\gioca\AppData\Local\Temp\tmpnv54720p\temp_model.py", line 162
+    schedule[d][s] = [w for w in
+                     ^
+SyntaxError: '[' was never closed
+16:11:46 | INFO    | llm.groq_client | Rate limiter: waited 11.5s for token budget
+16:12:09 | INFO    | llm.groq_client | Groq call ok (attempt 1): ~4080 tokens, model=qwen/qwen3.6-27b
+16:12:09 | INFO    | agents.drafting_agent | DraftingAgent produced 114 lines of logic
+16:12:11 | INFO    | agents.verification_agent | [iter 4] hard_errors=0 least_satisfied=[2]
+16:12:13 | INFO    | llm.groq_client | Rate limiter: waited 1.5s for token budget
+16:12:33 | INFO    | llm.groq_client | Groq call ok (attempt 1): ~3401 tokens, model=qwen/qwen3.6-27b
+16:12:33 | INFO    | agents.refinement_agent | RefinementAgent produced 140 lines of logic
+16:12:36 | INFO    | agents.verification_agent | [iter 5] new best valid schedule (gap=0.199)
+16:12:36 | INFO    | agents.verification_agent | [iter 5] hard_errors=0 least_satisfied=[18]
+16:12:36 | INFO    | core.graph | Stopped after reaching max_iterations=5 without a fully satisfactory schedule; returning best attempt (fairness gap=0.199).
+16:12:36 | INFO    | core.orchestrator | Finished after 5 iteration(s), 128.0s, is_complete=False, groq_calls=6, groq_tokens~20814
+16:12:36 | INFO    | core.orchestrator | Outputs written to outputs/
+16:34:14 | INFO    | core.orchestrator | Starting SmartScheduler: case_type=B workers=20 max_iterations=5
+16:34:18 | INFO    | llm.groq_client | Groq call ok (attempt 1): ~1883 tokens, model=qwen/qwen3.6-27b
+16:34:18 | INFO    | agents.preference_agent | Parsed preferences for 20 workers
+16:34:21 | INFO    | llm.groq_client | Groq call ok (attempt 1): ~4080 tokens, model=qwen/qwen3.6-27b
+16:34:21 | INFO    | agents.drafting_agent | DraftingAgent produced 114 lines of logic
+16:34:37 | INFO    | agents.verification_agent | [iter 1] new best valid schedule (gap=0.349)
+16:34:37 | INFO    | agents.verification_agent | [iter 1] hard_errors=0 least_satisfied=[2]
+16:34:53 | INFO    | llm.groq_client | Groq call ok (attempt 1): ~3327 tokens, model=qwen/qwen3.6-27b
+16:34:53 | INFO    | agents.refinement_agent | RefinementAgent produced 134 lines of logic
+16:34:58 | INFO    | agents.verification_agent | [iter 2] new best valid schedule (gap=0.299)
+16:34:58 | INFO    | agents.verification_agent | [iter 2] hard_errors=0 least_satisfied=[18]
+16:35:24 | INFO    | llm.groq_client | Groq call ok (attempt 1): ~3629 tokens, model=qwen/qwen3.6-27b
+16:35:24 | INFO    | agents.refinement_agent | RefinementAgent produced 138 lines of logic
+16:35:26 | INFO    | agents.verification_agent | [iter 3] execution/solve failed: Traceback (most recent call last):
+  File "C:\Users\gioca\AppData\Local\Temp\tmpuu6dpk7w\temp_model.py", line 94, in <module>
+    least_satisfied_workers = [w for w in range(num_workers) if float(scores.get(str(w), 1.0)) < 0.5]
+                                                                      ^^^^^^
+NameError: name 'scores' is not defined
+16:35:32 | INFO    | llm.groq_client | Rate limiter: waited 6.5s for token budget
+16:36:00 | INFO    | llm.groq_client | Groq call ok (attempt 1): ~4248 tokens, model=qwen/qwen3.6-27b
+16:36:00 | INFO    | agents.drafting_agent | DraftingAgent produced 129 lines of logic
+16:36:10 | INFO    | agents.verification_agent | [iter 4] hard_errors=0 least_satisfied=[9]
+16:36:27 | INFO    | llm.groq_client | Groq call ok (attempt 1): ~4000 tokens, model=qwen/qwen3.6-27b
+16:36:27 | INFO    | agents.refinement_agent | RefinementAgent produced 134 lines of logic
+16:36:27 | INFO    | agents.verification_agent | [iter 5] execution/solve failed: File "C:\Users\gioca\AppData\Local\Temp\tmpldsslaxk\temp_model.py", line 144
+    objective_terms.append(-int(round
+                               ^
+SyntaxError: '(' was never closed
+16:36:27 | INFO    | core.graph | Final attempt was invalid/worse than an earlier iteration; falling back to the best valid schedule found (gap=0.299).
+16:36:27 | INFO    | core.orchestrator | Finished after 5 iteration(s), 133.1s, is_complete=False, groq_calls=6, groq_tokens~21167
+16:36:29 | INFO    | core.orchestrator | Tabella immagine salvata in: outputs\schedule_table.png
+16:36:29 | INFO    | core.orchestrator | Outputs written to outputs/
