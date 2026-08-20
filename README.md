@@ -73,25 +73,3 @@ dipendenza esterna) e girano ovunque. `test_integration.py` esegue il
 grafo LangGraph completo con un client Groq finto (deterministico, nessuna
 chiamata di rete) ma con **OR-Tools reale**: si auto-salta se `ortools` o
 `langgraph` non sono installati.
-
-## Nota sullo sviluppo e validazione
-
-Il progetto e' stato validato con run reali contro l'API Groq per
-entrambi i casi d'uso (non solo test unitari) — vedi `docs/relazione.md`,
-sezioni 5 e 6, per il diario delle correzioni emerse durante la
-validazione reale e i risultati numerici ottenuti (gap di equita',
-token consumati, tempi di esecuzione).
-
-## Nota importante da verificare col docente
-
-Il vincolo di copertura minima per il Caso B, cosi' come specificato nel
-prompt fornito ("HARD CONSTRAINT 7"), richiede letteralmente **almeno 2
-lavoratori standard E almeno 1 specializzato** per turno. Questo pero' è
-in tensione con la descrizione testuale della traccia ("un turno puo'
-essere coperto da un lavoratore standard e due specializzati"), che
-implicherebbe che lo specializzato possa *sostituire* uno standard (quindi
-basterebbero 3 persone totali, di cui almeno 1 specializzato, non
-necessariamente 2 "vere" standard). Ho implementato la versione letterale
-del template come richiesto ("i vincoli HARD devono rimanere IDENTICI").
-Nei run osservati (vedi relazione, sezione 6) questo non ha causato
-infeasibility pratica, ma vale la pena chiarirlo prima della consegna.
