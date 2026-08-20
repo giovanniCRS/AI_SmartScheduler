@@ -1,0 +1,25 @@
+case_type: B
+num_standard: 13
+num_specialized: 7
+
+preferences:
+Il Lavoratore 0 (standard) preferisce i turni del mattino e vorrebbe evitare le notti.
+Il Lavoratore 1 (standard) puo' lavorare nei weekend.
+Il Lavoratore 2 (standard) non ha preferenze particolari.
+Il Lavoratore 3 (standard) preferisce evitare i festivi.
+Il Lavoratore 4 (standard) preferisce i turni pomeridiani.
+Il Lavoratore 5 (standard) tollera al massimo 2 notti consecutive.
+Il Lavoratore 6 (standard) preferisce i turni del mattino.
+Il Lavoratore 7 (standard) e' disponibile nei weekend.
+Il Lavoratore 8 (standard) preferisce evitare i weekend.
+Il Lavoratore 9 (standard) non ha preferenze particolari.
+Il Lavoratore 10 (standard) preferisce i turni pomeridiani.
+Il Lavoratore 11 (standard) tollera bene le notti.
+Il Lavoratore 12 (standard) preferisce i turni del mattino.
+Il Lavoratore 13 (specializzato) e' disponibile per coperture di emergenza due volte al mese.
+Il Lavoratore 14 (specializzato) preferisce evitare i turni notturni quando possibile.
+Il Lavoratore 15 (specializzato) non ha preferenze particolari.
+Il Lavoratore 16 (specializzato) preferisce i turni del mattino.
+Il Lavoratore 17 (specializzato) tollera bene i weekend.
+Il Lavoratore 18 (specializzato) preferisce evitare i giorni festivi.
+Il Lavoratore 19 (specializzato) non ha preferenze particolari.

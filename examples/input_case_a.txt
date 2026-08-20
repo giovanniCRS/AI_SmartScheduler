@@ -1,0 +1,17 @@
+case_type: A
+num_workers: 13
+
+preferences:
+Il Lavoratore 0 preferisce i turni del mattino e vorrebbe evitare i turni notturni quando possibile.
+Il Lavoratore 1 puo' lavorare nei weekend, ma non in giorni festivi consecutivi.
+Il Lavoratore 2 e' disponibile per coperture di emergenza due volte al mese e non ha preferenze particolari sui turni.
+Il Lavoratore 3 preferisce evitare i weekend, se possibile.
+Il Lavoratore 4 preferisce i turni pomeridiani e tollera al massimo 1 notte consecutiva.
+Il Lavoratore 5 non ha particolari preferenze, ma preferisce evitare i giorni festivi.
+Il Lavoratore 6 preferisce i turni del mattino.
+Il Lavoratore 7 tollera bene i turni notturni ma preferisce evitare i festivi.
+Il Lavoratore 8 preferisce evitare i turni notturni consecutivi (massimo 2).
+Il Lavoratore 9 e' disponibile nei weekend e non ha preferenze sui turni.
+Il Lavoratore 10 preferisce i turni pomeridiani ed evita i weekend quando possibile.
+Il Lavoratore 11 non ha preferenze particolari.
+Il Lavoratore 12 preferisce i turni del mattino e tollera bene i giorni festivi.

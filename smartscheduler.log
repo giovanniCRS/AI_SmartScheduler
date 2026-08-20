@@ -1,0 +1,106 @@
+08:47:46 | INFO    | core.graph | Final attempt was invalid/worse than an earlier iteration; falling back to the best valid schedule found (gap=0.050).
+08:47:46 | INFO    | core.graph | Stopped after reaching max_iterations=5 without ever producing a hard-constraint-valid schedule.
+08:47:46 | INFO    | core.graph | Final attempt was invalid/worse than an earlier iteration; falling back to the best valid schedule found (gap=0.050).
+08:47:50 | INFO    | core.graph | Final attempt was invalid/worse than an earlier iteration; falling back to the best valid schedule found (gap=0.050).
+08:47:50 | INFO    | core.graph | Stopped after reaching max_iterations=5 without ever producing a hard-constraint-valid schedule.
+08:47:50 | INFO    | core.graph | Final attempt was invalid/worse than an earlier iteration; falling back to the best valid schedule found (gap=0.050).
+08:57:37 | INFO    | core.graph | Final attempt was invalid/worse than an earlier iteration; falling back to the best valid schedule found (gap=0.050).
+08:57:37 | INFO    | core.graph | Stopped after reaching max_iterations=5 without ever producing a hard-constraint-valid schedule.
+08:57:37 | INFO    | core.graph | Final attempt was invalid/worse than an earlier iteration; falling back to the best valid schedule found (gap=0.050).
+09:15:28 | INFO    | core.graph | Final attempt was invalid/worse than an earlier iteration; falling back to the best valid schedule found (gap=0.050).
+09:15:28 | INFO    | core.graph | Stopped after reaching max_iterations=5 without ever producing a hard-constraint-valid schedule.
+09:15:28 | INFO    | core.graph | Final attempt was invalid/worse than an earlier iteration; falling back to the best valid schedule found (gap=0.050).
+09:15:42 | INFO    | core.graph | Final attempt was invalid/worse than an earlier iteration; falling back to the best valid schedule found (gap=0.050).
+09:15:42 | INFO    | core.graph | Stopped after reaching max_iterations=5 without ever producing a hard-constraint-valid schedule.
+09:15:42 | INFO    | core.graph | Final attempt was invalid/worse than an earlier iteration; falling back to the best valid schedule found (gap=0.050).
+09:15:56 | INFO    | agents.drafting_agent | DraftingAgent produced 114 lines of logic
+09:15:56 | INFO    | agents.refinement_agent | RefinementAgent produced 114 lines of logic
+11:28:32 | INFO    | core.orchestrator | Starting SmartScheduler: case_type=B workers=20 max_iterations=5
+11:28:35 | INFO    | llm.groq_client | Groq call ok (attempt 1): ~1883 tokens, model=qwen/qwen3.6-27b
+11:28:35 | INFO    | agents.preference_agent | Parsed preferences for 20 workers
+11:28:38 | INFO    | llm.groq_client | Groq call ok (attempt 1): ~4080 tokens, model=qwen/qwen3.6-27b
+11:28:38 | INFO    | agents.drafting_agent | DraftingAgent produced 114 lines of logic
+11:28:41 | INFO    | agents.verification_agent | [iter 1] new best valid schedule (gap=0.349)
+11:28:41 | INFO    | agents.verification_agent | [iter 1] hard_errors=0 least_satisfied=[2]
+11:28:47 | INFO    | llm.groq_client | Rate limiter: waited 6.0s for token budget
+11:29:05 | INFO    | llm.groq_client | Groq call ok (attempt 1): ~3223 tokens, model=qwen/qwen3.6-27b
+11:29:05 | INFO    | agents.refinement_agent | RefinementAgent produced 121 lines of logic
+11:29:09 | INFO    | agents.verification_agent | [iter 2] new best valid schedule (gap=0.302)
+11:29:09 | INFO    | agents.verification_agent | [iter 2] hard_errors=0 least_satisfied=[17, 18]
+11:29:15 | INFO    | llm.groq_client | Rate limiter: waited 5.5s for token budget
+11:29:25 | INFO    | llm.groq_client | Groq call ok (attempt 1): ~3234 tokens, model=qwen/qwen3.6-27b
+11:29:25 | INFO    | agents.refinement_agent | RefinementAgent produced 121 lines of logic
+11:29:28 | INFO    | agents.verification_agent | [iter 3] new best valid schedule (gap=0.197)
+11:29:28 | INFO    | agents.verification_agent | [iter 3] hard_errors=0 least_satisfied=[2, 13]
+11:29:42 | INFO    | llm.groq_client | Rate limiter: waited 13.5s for token budget
+11:29:53 | INFO    | llm.groq_client | Groq call ok (attempt 1): ~3301 tokens, model=qwen/qwen3.6-27b
+11:29:53 | INFO    | agents.refinement_agent | RefinementAgent produced 121 lines of logic
+11:29:56 | INFO    | agents.verification_agent | [iter 4] hard_errors=0 least_satisfied=[17]
+11:30:09 | INFO    | llm.groq_client | Rate limiter: waited 13.0s for token budget
+11:30:20 | INFO    | llm.groq_client | Groq call ok (attempt 1): ~3482 tokens, model=qwen/qwen3.6-27b
+11:30:20 | INFO    | agents.refinement_agent | RefinementAgent produced 126 lines of logic
+11:30:24 | INFO    | agents.verification_agent | [iter 5] hard_errors=0 least_satisfied=[13]
+11:30:24 | INFO    | core.graph | Final attempt was invalid/worse than an earlier iteration; falling back to the best valid schedule found (gap=0.197).
+11:30:24 | INFO    | core.orchestrator | Finished after 5 iteration(s), 112.6s, is_complete=False, groq_calls=6, groq_tokens~19203
+11:30:24 | INFO    | core.orchestrator | Outputs written to outputs/
+11:32:25 | INFO    | core.orchestrator | Starting SmartScheduler: case_type=A workers=13 max_iterations=5
+11:32:28 | INFO    | llm.groq_client | Groq call ok (attempt 1): ~1451 tokens, model=qwen/qwen3.6-27b
+11:32:28 | INFO    | agents.preference_agent | Parsed preferences for 13 workers
+11:32:31 | INFO    | llm.groq_client | Groq call ok (attempt 1): ~3669 tokens, model=qwen/qwen3.6-27b
+11:32:31 | INFO    | agents.drafting_agent | DraftingAgent produced 114 lines of logic
+11:32:34 | INFO    | agents.verification_agent | [iter 1] new best valid schedule (gap=0.309)
+11:32:34 | INFO    | agents.verification_agent | [iter 1] hard_errors=0 least_satisfied=[8]
+11:32:36 | INFO    | llm.groq_client | Rate limiter: waited 2.5s for token budget
+11:32:40 | INFO    | llm.groq_client | Groq call ok (attempt 1): ~3202 tokens, model=qwen/qwen3.6-27b
+11:32:40 | INFO    | agents.refinement_agent | RefinementAgent produced 136 lines of logic
+11:32:43 | INFO    | agents.verification_agent | [iter 2] new best valid schedule (gap=0.256)
+11:32:43 | INFO    | agents.verification_agent | [iter 2] hard_errors=0 least_satisfied=[1, 3]
+11:33:04 | INFO    | llm.groq_client | Rate limiter: waited 21.0s for token budget
+11:33:07 | INFO    | llm.groq_client | Groq call ok (attempt 1): ~3405 tokens, model=qwen/qwen3.6-27b
+11:33:07 | INFO    | agents.refinement_agent | RefinementAgent produced 136 lines of logic
+11:33:10 | INFO    | agents.verification_agent | [iter 3] hard_errors=0 least_satisfied=[9]
+11:33:31 | INFO    | llm.groq_client | Rate limiter: waited 21.0s for token budget
+11:33:35 | INFO    | llm.groq_client | Groq call ok (attempt 1): ~3440 tokens, model=qwen/qwen3.6-27b
+11:33:35 | INFO    | agents.refinement_agent | RefinementAgent produced 138 lines of logic
+11:33:38 | INFO    | agents.verification_agent | [iter 4] hard_errors=0 least_satisfied=[1]
+11:33:59 | INFO    | llm.groq_client | Rate limiter: waited 21.0s for token budget
+11:34:03 | INFO    | llm.groq_client | Groq call ok (attempt 1): ~3502 tokens, model=qwen/qwen3.6-27b
+11:34:03 | INFO    | agents.refinement_agent | RefinementAgent produced 138 lines of logic
+11:34:06 | INFO    | agents.verification_agent | [iter 5] hard_errors=0 least_satisfied=[11]
+11:34:06 | INFO    | core.graph | Final attempt was invalid/worse than an earlier iteration; falling back to the best valid schedule found (gap=0.256).
+11:34:06 | INFO    | core.orchestrator | Finished after 5 iteration(s), 101.5s, is_complete=False, groq_calls=6, groq_tokens~18669
+11:34:06 | INFO    | core.orchestrator | Outputs written to outputs/
+11:44:57 | INFO    | core.orchestrator | Starting SmartScheduler: case_type=B workers=20 max_iterations=5
+11:45:00 | INFO    | llm.groq_client | Groq call ok (attempt 1): ~1883 tokens, model=qwen/qwen3.6-27b
+11:45:00 | INFO    | agents.preference_agent | Parsed preferences for 20 workers
+11:45:00 | INFO    | llm.groq_client | Groq call failed (attempt 1/4): Error code: 429 - {'error': {'message': 'Rate limit reached for model `qwen/qwen3.6-27b` in organization `org_01m0akj9jyew685zwn64711cwk` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 196915, Requested 4769. Please try again in 12m7.488s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}. Retrying in 2.0s [rate limited]
+11:45:03 | INFO    | llm.groq_client | Groq call failed (attempt 2/4): Error code: 429 - {'error': {'message': 'Rate limit reached for model `qwen/qwen3.6-27b` in organization `org_01m0akj9jyew685zwn64711cwk` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 196910, Requested 4769. Please try again in 12m5.328s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}. Retrying in 4.0s [rate limited]
+11:45:07 | INFO    | llm.groq_client | Groq call failed (attempt 3/4): Error code: 429 - {'error': {'message': 'Rate limit reached for model `qwen/qwen3.6-27b` in organization `org_01m0akj9jyew685zwn64711cwk` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 196901, Requested 4769. Please try again in 12m1.44s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}. Retrying in 8.0s [rate limited]
+11:45:15 | INFO    | llm.groq_client | Groq call failed (attempt 4/4): Error code: 429 - {'error': {'message': 'Rate limit reached for model `qwen/qwen3.6-27b` in organization `org_01m0akj9jyew685zwn64711cwk` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 196881, Requested 3969. Please try again in 6m7.2s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}. Retrying in 16.0s [rate limited]
+11:45:31 | ERROR   | __main__ | SmartScheduler failed: Groq call failed after 4 attempts: Error code: 429 - {'error': {'message': 'Rate limit reached for model `qwen/qwen3.6-27b` in organization `org_01m0akj9jyew685zwn64711cwk` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 196881, Requested 3969. Please try again in 6m7.2s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+11:49:10 | INFO    | core.orchestrator | Starting SmartScheduler: case_type=B workers=20 max_iterations=5
+11:49:13 | INFO    | llm.groq_client | Groq call ok (attempt 1): ~1883 tokens, model=qwen/qwen3.6-27b
+11:49:13 | INFO    | agents.preference_agent | Parsed preferences for 20 workers
+11:49:16 | INFO    | llm.groq_client | Groq call ok (attempt 1): ~4082 tokens, model=qwen/qwen3.6-27b
+11:49:16 | INFO    | agents.drafting_agent | DraftingAgent produced 114 lines of logic
+11:49:19 | INFO    | agents.verification_agent | [iter 1] new best valid schedule (gap=0.349)
+11:49:19 | INFO    | agents.verification_agent | [iter 1] hard_errors=0 least_satisfied=[2]
+11:49:25 | INFO    | llm.groq_client | Rate limiter: waited 6.0s for token budget
+11:49:49 | INFO    | llm.groq_client | Groq call ok (attempt 1): ~3342 tokens, model=qwen/qwen3.6-27b
+11:49:49 | INFO    | agents.refinement_agent | RefinementAgent produced 135 lines of logic
+11:49:54 | INFO    | agents.verification_agent | [iter 2] new best valid schedule (gap=0.226)
+11:49:54 | INFO    | agents.verification_agent | [iter 2] hard_errors=0 least_satisfied=[14]
+11:49:54 | INFO    | llm.groq_client | Rate limiter: waited 0.5s for token budget
+11:50:16 | INFO    | llm.groq_client | Groq call ok (attempt 1): ~3499 tokens, model=qwen/qwen3.6-27b
+11:50:16 | INFO    | agents.refinement_agent | RefinementAgent produced 135 lines of logic
+11:50:20 | INFO    | agents.verification_agent | [iter 3] hard_errors=0 least_satisfied=[5]
+11:50:22 | INFO    | llm.groq_client | Rate limiter: waited 1.5s for token budget
+11:50:47 | INFO    | llm.groq_client | Groq call ok (attempt 1): ~3457 tokens, model=qwen/qwen3.6-27b
+11:50:47 | INFO    | agents.refinement_agent | RefinementAgent produced 135 lines of logic
+11:50:50 | INFO    | agents.verification_agent | [iter 4] hard_errors=0 least_satisfied=[18]
+11:51:13 | INFO    | llm.groq_client | Groq call ok (attempt 1): ~3555 tokens, model=qwen/qwen3.6-27b
+11:51:13 | INFO    | agents.refinement_agent | RefinementAgent produced 135 lines of logic
+11:51:18 | INFO    | agents.verification_agent | [iter 5] hard_errors=0 least_satisfied=[5]
+11:51:18 | INFO    | core.graph | Final attempt was invalid/worse than an earlier iteration; falling back to the best valid schedule found (gap=0.226).
+11:51:18 | INFO    | core.orchestrator | Finished after 5 iteration(s), 127.7s, is_complete=False, groq_calls=6, groq_tokens~19818
+11:51:18 | INFO    | core.orchestrator | Outputs written to outputs/
