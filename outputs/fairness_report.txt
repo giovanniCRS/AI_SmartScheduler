@@ -1,28 +1,21 @@
 SmartScheduler - Fairness Report
 ========================================
 
-Worker 18: satisfaction = 0.441
-Worker 11: satisfaction = 0.447
-Worker 17: satisfaction = 0.458
-Worker 14: satisfaction = 0.470
-Worker 8: satisfaction = 0.487
+Worker 11: satisfaction = 0.434
+Worker 8: satisfaction = 0.441
+Worker 3: satisfaction = 0.487
+Worker 1: satisfaction = 0.500
 Worker 2: satisfaction = 0.500
-Worker 3: satisfaction = 0.500
 Worker 5: satisfaction = 0.500
+Worker 7: satisfaction = 0.500
 Worker 9: satisfaction = 0.500
-Worker 13: satisfaction = 0.500
-Worker 15: satisfaction = 0.500
-Worker 19: satisfaction = 0.500
-Worker 7: satisfaction = 0.537
-Worker 1: satisfaction = 0.542
-Worker 6: satisfaction = 0.542
-Worker 12: satisfaction = 0.592
-Worker 10: satisfaction = 0.605
-Worker 4: satisfaction = 0.653
-Worker 16: satisfaction = 0.693
-Worker 0: satisfaction = 0.740
+Worker 4: satisfaction = 0.542
+Worker 12: satisfaction = 0.588
+Worker 6: satisfaction = 0.592
+Worker 0: satisfaction = 0.680
+Worker 10: satisfaction = 0.713
 
-Least satisfied worker(s): [18]
-Average satisfaction: 0.535
-Min satisfaction: 0.441
-Max satisfaction: 0.740
+Least satisfied worker(s): [11]
+Average satisfaction: 0.537
+Min satisfaction: 0.434
+Max satisfaction: 0.713
